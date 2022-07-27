@@ -1,0 +1,6 @@
+[Variables]
+filament = {'index': 0, 'array': [{'hotend': 245.0, 'name': u'PET', 'bed': 70.0}]}
+plates = {'index': 0, 'array': [{'name': u'Flex_PEI', 'offset': 0.0}]}
+pressure_advance = [{'id': u'PLA', 'val': [{'nozzle': 0.4, 'pa': 0.037, 'st': 0.04}]}, {'id': u'ABS', 'val': [{'nozzle': 0.4, 'pa': 0.0, 'st': 0.04}]}, {'id': u'PET', 'val': [{'nozzle': 0.4, 'pa': 0.045, 'st': 0.04}]}]
+print_stats = {'filament': 51055.8082099995, 'time': {'filter': 24406, 'total': 26236, 'service': 24406}}
+

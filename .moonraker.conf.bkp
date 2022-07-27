@@ -1,0 +1,83 @@
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /tmp/klippy_uds
+max_upload_size = 1024
+enable_debug_logging = False
+
+[file_manager]
+config_path = ~/klipper_config
+log_path = ~/klipper_logs
+queue_gcode_uploads = False
+enable_object_processing = false
+
+[database]
+database_path = ~/.moonraker_database
+
+[data_store]
+temperature_store_size = 1200
+gcode_store_size = 1000
+
+[job_queue]
+load_on_startup = False
+automatic_transition = False
+
+[authorization]
+force_logins = False
+cors_domains = 
+	*.local
+	*.lan
+	*://app.fluidd.xyz
+	*://dev-app.fluidd.xyz
+	*://my.mainsail.xyz
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[history]
+
+[octoprint_compat]
+
+[zeroconf]
+
+[update_manager]
+channel = dev
+enable_repo_debug = True
+enable_auto_refresh = True
+enable_system_updates = True
+refresh_interval = 60
+
+[update_manager mainsail]
+type = web
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
+[update_manager kiauh]
+type = git_repo
+path = ~/kiauh
+origin = https://github.com/th33xitus/kiauh.git
+is_system_service = False
+
+[update_manager z_calibration]
+type = git_repo
+path = ~/klipper_z_calibration
+origin = https://github.com/protoloft/klipper_z_calibration.git
+
+[update_manager led_effect]
+type = git_repo
+path = ~/klipper-led_effect
+origin = https://github.com/julianschill/klipper-led_effect.git
+is_system_service = False
+
+[power psu]
+type = gpio
+pin = !gpiochip0/gpio17
+initial_state = on
+bound_service = klipper
+locked_while_printing = True
+
